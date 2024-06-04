@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>OpenCV.js Image Processing</title>
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://docs.opencv.org/4.x/opencv.js" onload="onOpenCvReady();"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      async
+      src="https://docs.opencv.org/4.x/opencv.js"
+      onload="onOpenCvReady();"
+    ></script>
+  </head>
+  <body>
     <h1>Please Upload Image</h1>
 
     <label for="imageUpload" class="custom-file-upload">
       <span>Upload</span>
-  </label>
-  <input id="imageUpload" type="file" style="display:none;" >
-  <button class="button" id="downloadButton">Download</button>
-    <br><br>
-    <div id="canvasContainer" style="display: none;">
+    </label>
+    <input id="imageUpload" type="file" style="display: none" />
+    <button class="button" id="downloadButton">Download</button>
+
+    <!-- <p>
+      canvasOriginal 原圖&nbsp;&nbsp; canvasGray 灰階&nbsp;&nbsp;
+      canvasBinaryTraditional 傳統臨界值&nbsp;&nbsp; canvasBinaryOtsu
+      推薦臨界值（Otsu）&nbsp;&nbsp; canvasEdge 邊緣檢測
+    </p> -->
+
+    <div id="canvasContainer" style="display: none">
       <!-- canvas1 -->
-      <div class="canvasWrapper">
+      <div class="canvasWrapper_original">
         <canvas id="canvasOriginal"></canvas>
-        <div class="canvasIdLabel">canvasOriginal</div>
+        <div class="canvasIdLabel">原圖</div>
       </div>
       <!-- canvas2 -->
       <div class="canvasWrapper">
         <canvas id="canvasGray"></canvas>
-        <div class="canvasIdLabel">canvasGray</div>
+        <div class="canvasIdLabel">灰階</div>
       </div>
       <!-- canvas3 -->
       <div class="canvasWrapper">
         <canvas id="canvasBinaryTraditional"></canvas>
-        <div class="canvasIdLabel">canvasBinaryTraditional<div class="BWLabel" id="blackWhiteRatioTraditional"></div></div><br>
+        <div class="canvasIdLabel">
+          傳統臨界值(二值化)
+          <div class="BWLabel" id="blackWhiteRatioTraditional"></div>
+        </div>
+        <br />
       </div>
       <!-- canvas4 -->
       <div class="canvasWrapper">
         <canvas id="canvasBinaryOtsu"></canvas>
-        <div class="canvasIdLabel">canvasBinaryOtsu<div class="BWLabel" id="blackWhiteRatioOtsu"></div></div><br>
+        <div class="canvasIdLabel">
+          推薦臨界值(Otsu)
+          <div class="BWLabel" id="blackWhiteRatioOtsu"></div>
+        </div>
+        <br />
       </div>
       <!-- canvas5 -->
       <div class="canvasWrapper">
         <canvas id="canvasEdge"></canvas>
-        <div class="canvasIdLabel">canvasEdge</div>
+        <div class="canvasIdLabel">邊緣檢測</div>
       </div>
-
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

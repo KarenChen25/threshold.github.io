@@ -1,88 +1,99 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 50px;
-    margin-left:10%;
-    margin-right:10%;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 input[type="file"] {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
+/* p{text-align: left;} */
 canvas {
-    border: 1px solid black; /* 为 canvas 添加边框以区分 */
-    margin-bottom: 20px; /* 设置 canvas 之间的间隙 */
+  border: 1px solid black; /* 为 canvas 添加边框以区分 */
+  margin-bottom: 20px; /* 设置 canvas 之间的间隙 */
+}
+h1,
+p {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #canvasContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* 将内容水平居中 */
-    gap: 20px; /* 设置元素之间的间隙 */
-    margin: 0 auto; /* 水平居中 */
-    max-width: 100%; /* 设置最大宽度，根据实际需要调整 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 将内容水平居中 */
+  gap: 20px; /* 设置元素之间的间隙 */
+  margin: 0 auto; /* 水平居中 */
+  margin-bottom: 10%;
+  max-width: 100%; /* 设置最大宽度，根据实际需要调整 */
 }
 
+.canvasWrapper_original {
+  position: relative;
+  text-align: center;
+  padding: 30px;
+  width: 100%;
+}
 .canvasWrapper {
-    position: relative;
-    text-align: center;
-    padding: 30px;
+  position: relative;
+  text-align: center;
+  padding: 30px;
 }
 
 .canvasIdLabel {
-    position: absolute;
-    font-weight: bold;
-    left: 50%; /* 将标签置于水平中心 */
-    transform: translateX(-50%); /* 水平居中对齐 */
-    padding: 10px;
+  position: absolute;
+  font-weight: bold;
+  left: 50%; /* 将标签置于水平中心 */
+  transform: translateX(-50%); /* 水平居中对齐 */
+  padding: 10px;
 }
 
 .BWLabel {
-    position: absolute;
-    font-weight: bold;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-top: 10px;
-    font-size: 12px;
+  position: absolute;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 10px;
+  font-size: 12px;
 }
 
-
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #41a0ff; /* 按钮背景颜色 */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #41a0ff; /* 按钮背景颜色 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #1171c0; /* 鼠标悬停时按钮背景颜色 */
+  background-color: #1171c0; /* 鼠标悬停时按钮背景颜色 */
 }
 
 /* 選擇檔案按鈕 */
 .custom-file-upload {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #41a0ff; /* 按钮背景颜色 */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #41a0ff; /* 按钮背景颜色 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .custom-file-upload:hover {
-    background-color: #1171c0; /* 鼠标悬停时按钮背景颜色 */
+  background-color: #1171c0; /* 鼠标悬停时按钮背景颜色 */
 }
