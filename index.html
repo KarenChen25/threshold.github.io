@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenCV.js Image Processing</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://docs.opencv.org/4.x/opencv.js" onload="onOpenCvReady();"></script>
+</head>
+<body>
+    <h1>Please Upload Image</h1>
+
+    <label for="imageUpload" class="custom-file-upload">
+      <span>Upload</span>
+  </label>
+  <input id="imageUpload" type="file" style="display:none;" >
+  <button class="button" id="downloadButton">Download</button>
+    <br><br>
+    <div id="canvasContainer" style="display: none;">
+      <!-- canvas1 -->
+      <div class="canvasWrapper">
+        <canvas id="canvasOriginal"></canvas>
+        <div class="canvasIdLabel">canvasOriginal</div>
+      </div>
+      <!-- canvas2 -->
+      <div class="canvasWrapper">
+        <canvas id="canvasGray"></canvas>
+        <div class="canvasIdLabel">canvasGray</div>
+      </div>
+      <!-- canvas3 -->
+      <div class="canvasWrapper">
+        <canvas id="canvasBinaryTraditional"></canvas>
+        <div class="canvasIdLabel">canvasBinaryTraditional<div class="BWLabel" id="blackWhiteRatioTraditional"></div></div><br>
+      </div>
+      <!-- canvas4 -->
+      <div class="canvasWrapper">
+        <canvas id="canvasBinaryOtsu"></canvas>
+        <div class="canvasIdLabel">canvasBinaryOtsu<div class="BWLabel" id="blackWhiteRatioOtsu"></div></div><br>
+      </div>
+      <!-- canvas5 -->
+      <div class="canvasWrapper">
+        <canvas id="canvasEdge"></canvas>
+        <div class="canvasIdLabel">canvasEdge</div>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
